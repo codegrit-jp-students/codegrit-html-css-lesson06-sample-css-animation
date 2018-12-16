@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    @keyframes to-circle { /* アニメーションにto-circleという名前を付けています */
+      0% { 
+        background-color: red; /* 背景色は最初と最後は赤です */
+      }
+      50% {
+        border-radius: 50%; /* 正方形から円へと変化させます */
+      }
+      100% {
+        background-color: blue; /* 最終的に背景が青色に変わります */
+        border-radius: 0; /* 円から正方形へ戻します */
+      }
+    }
+
+    .square {
+      height: 50px;
+      width: 50px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      animation-name: to-circle; /* animationにto-circleを利用 */
+      animation-duration: 2s; /* 1秒かけて、円に代わり、1秒かけて正方形に戻るため全部で2秒 */
+      animation-iteration-count: infinite; /* アニメーションを繰り返します */
+      animation-fill-mode: both;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="square"></div>
+</body>
+
+</html>
